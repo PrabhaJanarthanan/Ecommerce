@@ -37,11 +37,18 @@ class PRImages {
   static const String banner2 = "assets/images/banners/banner2.jpg";
   static const String banner3 = "assets/images/banners/banner3.jpg";
 
+  // -- Banners
+  static const String promoBanner1 = "assets/images/banners/promo-banner-1.png";
+  static const String promoBanner2 = "assets/images/banners/promo-banner-2.png";
+  static const String promoBanner3 = "assets/images/banners/promo-banner-3.png";
+
   //products
   static const String product1 = "assets/images/products/product-1.png";
   static const String product2 = "assets/images/products/woodplate2.png";
   static const String product3 = "assets/images/products/woodplate3.png";
   static const String product4 = "assets/images/products/woodplate4.png";
+
+
 
   //Payment methods
   static const String googlePay = "assets/icons/payment_methods/google-pay.png";

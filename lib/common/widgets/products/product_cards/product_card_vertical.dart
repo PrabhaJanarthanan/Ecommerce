@@ -30,7 +30,7 @@ class PRProductCardVertical extends StatelessWidget {
         decoration: BoxDecoration(
           boxShadow: [PRShadowStyle.verticalProductShadow],
           borderRadius: BorderRadius.circular(PRSizes.productImageRadius),
-          color: dark ? PRColors.grey : PRColors.white,
+          color: dark ? PRColors.darkGrey : PRColors.white,
         ),
         child: Column(
           children: [
@@ -50,7 +50,7 @@ class PRProductCardVertical extends StatelessWidget {
                   //saletag
                   Positioned(
                     top: 12,
-                    left: 10,
+                    //left: 10,
                     child: PRRoundedContainer(
                       radius: PRSizes.sm,
                       backgroundColor: PRColors.secondaryColor.withAlpha(50),
