@@ -9,7 +9,7 @@ class OrderScreen extends StatelessWidget {
     return Scaffold(
       //AppBar
       appBar: PRAppBar(
-        title: Text('My Orders',
+        title: Text(' Orders',
         style: Theme.of(context).textTheme.headlineSmall),
       ),
     );
