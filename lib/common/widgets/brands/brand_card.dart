@@ -48,7 +48,7 @@ class PRBrandCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   PRBrandTitleTextWithVerifiedIcon(
-                      title: 'Woods', brandTextSize: TextSizes.large),
+                      title: 'Nike', brandTextSize: TextSizes.large),
                   Text("77 Products",
                       overflow: TextOverflow.ellipsis,
                       style: Theme.of(context).textTheme.labelMedium),

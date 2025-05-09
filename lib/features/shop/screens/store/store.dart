@@ -3,8 +3,11 @@ import 'package:ecommerce/common/widgets/appbar/tabbar.dart';
 import 'package:ecommerce/common/widgets/layout/grid_layout.dart';
 import 'package:ecommerce/common/widgets/products/products_cart/cart_menu_icon.dart';
 import 'package:ecommerce/common/widgets/texts/section_heading.dart';
+import 'package:ecommerce/features/shop/screens/brands/all_brands.dart';
 import 'package:ecommerce/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/instance_manager.dart';
 
 import '../../../../common/widgets/custom_shapes/containers/searchbar_container.dart';
 import '../../../../common/widgets/brands/brand_card.dart';
@@ -60,7 +63,7 @@ class StoreScreen extends StatelessWidget {
                       PRSectionHeading(
                           title: 'Featured Products',
                           showActionButton: true,
-                          onPressed: () {}),
+                          onPressed: () => Get.to(() => AllBrandsScreen())),
                       const SizedBox(height: PRSizes.spaceBtwItems / 1.5),
 
                       PRGridLayout(

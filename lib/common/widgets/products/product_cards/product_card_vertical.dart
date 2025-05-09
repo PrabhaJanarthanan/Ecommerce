@@ -84,9 +84,9 @@ class PRProductCardVertical extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    PRProductTitleText(title: 'Wooden Plates', smallSize: true),
+                    PRProductTitleText(title: 'Sports Shoes', smallSize: true),
                     SizedBox(height: PRSizes.spaceBtwItems / 2),
-                    PRBrandTitleTextWithVerifiedIcon(title: 'Woods'),
+                    PRBrandTitleTextWithVerifiedIcon(title: 'Nike'),
                   ],
                 ),
               ),
