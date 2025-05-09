@@ -1,7 +1,8 @@
-import 'package:ecommerce/features/authentication/screens/onboarding/onboarding_screen.dart';
 import 'package:ecommerce/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'utils/constants/colors.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -13,7 +14,11 @@ class App extends StatelessWidget {
       theme: PRAppTheme.lightTheme,
       darkTheme: PRAppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
-      home: OnBoardingScreen(),
+      home: Scaffold(backgroundColor: PRColors.primaryColor, body: Center(
+        child: CircularProgressIndicator(
+          color: PRColors.white
+        ),
+      )),
     );
   }
 }

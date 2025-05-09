@@ -1,0 +1,24 @@
+{"flutter":{
+    "platforms":{
+        "android":{
+            "default":{
+                "projectId":"precommerce-a2e82",
+                "appId":"1:799377217080:android:9ee3e08b0695031f92f8cd",
+                "fileOutput":"android/app/google-services.json"
+                }
+            },
+            "dart":{
+                "lib/firebase_options.dart":{
+                    "projectId":"precommerce-a2e82",
+                    "configurations":{
+                        "android":"1:799377217080:android:9ee3e08b0695031f92f8cd","ios":"1:799377217080:ios:39386a929c0a85e792f8cd","web":"1:799377217080:web:18951840e942112692f8cd","windows":"1:799377217080:web:4f7b9322ff8c9e4f92f8cd"
+                        
+                    }
+                        
+                    }
+                        
+                    }
+            
+                    }
+    }
+}
