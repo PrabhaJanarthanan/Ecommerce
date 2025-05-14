@@ -1,3 +1,4 @@
+import 'package:ecommerce/bindings/general_bindings.dart';
 import 'package:ecommerce/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,6 +14,7 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: PRAppTheme.lightTheme,
       darkTheme: PRAppTheme.darkTheme,
+      initialBinding: GeneralBindings(),
       debugShowCheckedModeBanner: false,
       home: Scaffold(backgroundColor: PRColors.primaryColor, body: Center(
         child: CircularProgressIndicator(

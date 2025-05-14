@@ -1,4 +1,15 @@
+
 class PRValidator {
+
+  // Empty Text Field Validator
+  static String? validateEmptyText(String? fieldName, String? value) {
+    if (value == null || value.isEmpty) {
+      return '$fieldName is Required.';
+    }
+    return null;
+  }
+
+
   static String? validateEmail(String? value) {
     if (value == null || value.isEmpty) {
       return 'Email is Required.';
@@ -33,6 +44,21 @@ class PRValidator {
 
     if (!value.contains(RegExp(r'[!@#$%^&*(),.?":{}|<>]'))) {
       return 'Password must contain atleast one special character';
+    }
+    return null;
+  }
+
+  static String? validatePhoneNumber(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Phone Number is Required.';
+    }
+
+    // Regular expression for phone number validation
+    //final phoneRegExp = RegExp(r'^\+?[0-9]{10,15}$');
+    final phoneRegExp = RegExp(r'^\d{10}$');
+
+    if (!phoneRegExp.hasMatch(value)) {
+      return 'Invalid Phone Number.';
     }
     return null;
   }

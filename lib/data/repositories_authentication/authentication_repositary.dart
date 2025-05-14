@@ -21,11 +21,12 @@ class AuthenticationRepositary extends GetxController{
   // Function to show relevant screen
   screenRedirect() async {
     // Local storage
+
     if(kDebugMode){
-      print('======== Get Storage ========');
+      print('===================== GET STORAGE Auth Repo=====================');
       print(deviceStorage.read('IsFirstTime'));
     }
-
+    
     deviceStorage.writeIfNull('IsFirstTime', true);
     deviceStorage.read('IsFirstTime') != true ? Get.offAll(() => const LoginScreen())
       : Get.offAll(const OnBoardingScreen());

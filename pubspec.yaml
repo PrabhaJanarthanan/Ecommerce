@@ -17,7 +17,9 @@ dependencies:
   http: 
   intl:
   logger:
+  lottie: ^3.3.1
   url_launcher:
+  connectivity_plus: ^6.1.4
   flutter_native_splash: ^2.4.4
   smooth_page_indicator: ^1.2.1
   

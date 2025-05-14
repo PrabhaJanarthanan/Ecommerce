@@ -2,9 +2,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:http/http.dart' as deviceStorage;
 
-import '../screens/login/login.dart';
+import '../../screens/login/login.dart';
 
 class OnBoardingController extends GetxController {
   static OnBoardingController get instance => Get.find();
@@ -16,7 +15,7 @@ class OnBoardingController extends GetxController {
   //update current index when the page is swiping
   void updatePageIndicator(index) => currentPageIndex.value = index;
 
-  //dotselected page
+  //jump to the specific dotselected page
   void dotNavigationClick(index) {
     currentPageIndex.value = index;
     pageController.jumpTo(index);
@@ -28,16 +27,16 @@ class OnBoardingController extends GetxController {
       final storage = GetStorage();
 
       if(kDebugMode){
-      print('======== Get Storage ========');
+      print('===================== GET STORAGE next button =====================');
       print(storage.read('IsFirstTime'));
     }
-      storage.write('IsFirstTime', false);
+
+      storage.write(('IsFirstTime'), false);
 
       if(kDebugMode){
-        print('======== Get Storage next button ========');
-        print(storage.read('IsFirstTime'));
-      }
-
+      print('===================== GET STORAGE next button =====================');
+      print(storage.read('IsFirstTime'));
+    }
 
       Get.offAll(const LoginScreen());
     } else {
