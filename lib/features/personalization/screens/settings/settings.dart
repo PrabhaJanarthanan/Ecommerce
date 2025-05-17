@@ -4,6 +4,7 @@ import 'package:ecommerce/common/widgets/layout/list_tiles/settings_menu_tile.da
 import 'package:ecommerce/common/widgets/texts/section_heading.dart';
 import 'package:ecommerce/features/personalization/screens/address/user_address.dart';
 import 'package:ecommerce/features/shop/screens/order/order.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -11,6 +12,7 @@ import 'package:iconsax/iconsax.dart';
 import '../../../../common/widgets/layout/list_tiles/user_profile_tile.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
+import '../../../authentication/screens/login/login.dart';
 import '../profile/profile.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -110,9 +112,17 @@ class SettingsScreen extends StatelessWidget {
 
                   //logout button
                   const SizedBox(height: PRSizes.spaceBtwSections),
-                  SizedBox(
+                 SizedBox(
                     width: double.infinity,
-                    child: OutlinedButton(onPressed: (){}, child: const Text("Logout"))),
+                    child: OutlinedButton(
+                      onPressed: () async {
+                        await FirebaseAuth.instance.signOut();
+                        Get.offAll(() => const LoginScreen()); // or WelcomeScreen
+                      },
+                      child: const Text("Logout"),
+                    ),
+                  ),
+
                   
                   const SizedBox(height: PRSizes.spaceBtwSections * 2),
                 

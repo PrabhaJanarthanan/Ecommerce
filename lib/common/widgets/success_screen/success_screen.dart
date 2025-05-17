@@ -1,4 +1,5 @@
 import 'package:ecommerce/common/styles/spacing_style.dart';
+import 'package:ecommerce/utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';
 
 import '../../../utils/constants/sizes.dart';
@@ -25,7 +26,7 @@ class SuccessScreen extends StatelessWidget {
           child: Column(
             children: [
               Image(
-                image: AssetImage(image),
+                image: AssetImage(PRImages.successfulPayment),
                 width: PRHelperFunctions.screenWidth() * 0.6,
               ),
               const SizedBox(height: PRSizes.spaceBtwSections),

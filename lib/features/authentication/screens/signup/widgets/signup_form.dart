@@ -84,14 +84,18 @@ class PRSignupForm extends StatelessWidget {
           const SizedBox(height: PRSizes.spaceBtwInputFields),
 
           //password
-          TextFormField(
-            controller: controller.password,
-            validator: (value) => PRValidator.validatePassword(value),
-            obscureText: true,
-            decoration: const InputDecoration(
-              labelText: PRTexts.password,
-              prefixIcon: Icon(Iconsax.password_check),
-              suffixIcon: Icon(Iconsax.eye_slash),
+          Obx(
+            () => TextFormField(
+              controller: controller.password,
+              validator: (value) => PRValidator.validatePassword(value),
+              obscureText: controller.hidePassword.value,
+              decoration:  InputDecoration(
+                labelText: PRTexts.password,
+                prefixIcon: Icon(Iconsax.password_check),
+                suffixIcon: IconButton(
+                  onPressed: () => controller.hidePassword.value = !controller.hidePassword.value, 
+                  icon:  Icon(controller.hidePassword.value ? Iconsax.eye_slash : Iconsax.eye),),
+              ),
             ),
           ),
           const SizedBox(height: PRSizes.spaceBtwSections),

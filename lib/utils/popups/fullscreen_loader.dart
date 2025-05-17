@@ -17,11 +17,14 @@ class PRFullScreenLoader{
           color: PRHelperFunctions.isDarkMode(Get.context!) ? PRColors.dark : PRColors.white,
           width: double.infinity,
           height: double.infinity,
-          child: Column(
-            children: [
-              const SizedBox(height: 250),
-              PRAnimationLoaderWidget(text: text, animation: animation),
-            ],
+          child: Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                //const SizedBox(height: 250),
+                PRAnimationLoaderWidget(text: text, animation: animation),
+              ],
+            ),
           ),
         )
       )
@@ -34,3 +37,28 @@ class PRFullScreenLoader{
     Navigator.of(Get.overlayContext!).pop(); 
   }
 }
+
+
+
+// static void openLoadingDialog(String text, String animation){
+//   showDialog(
+//     context: Get.overlayContext!,
+//     barrierDismissible: false,
+//     builder: (_) => PopScope(
+//       canPop: false,
+//       child: Container(
+//         color: PRHelperFunctions.isDarkMode(Get.context!) ? PRColors.dark : PRColors.white,
+//         width: double.infinity,
+//         height: double.infinity,
+//         child: Center(
+//           child: Column(
+//             mainAxisSize: MainAxisSize.min,
+//             children: [
+//               PRAnimationLoaderWidget(text: text, animation: animation),
+//             ],
+//           ),
+//         ),
+//       ),
+//     ),
+//   );
+// }

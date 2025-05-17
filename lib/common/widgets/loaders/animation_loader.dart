@@ -34,8 +34,12 @@ class PRAnimationLoaderWidget extends StatelessWidget {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
         children: [
-          Lottie.asset(animation, width: MediaQuery.of(context).size.width * 0.8),
+          Lottie.asset(animation, 
+          width: MediaQuery.of(context).size.width * 0.8,
+          height: 200,
+          fit: BoxFit.contain),
           const SizedBox(height: PRSizes.defaultSpace),
           Text(
             text,
