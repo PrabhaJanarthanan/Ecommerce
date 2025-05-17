@@ -21,8 +21,8 @@ class LoginController extends GetxController{
   @override
   void onInit() {
     super.onInit();
-    email.text = localStorage.read('REMEMBER_ME_EMAIL');
-    password.text = localStorage.read('REMEMBER_ME_PASSWORD');
+    email.text = localStorage.read('REMEMBER_ME_EMAIL') ?? '';
+    password.text = localStorage.read('REMEMBER_ME_PASSWORD') ?? '';
   }
 
   //Email and Password signin
